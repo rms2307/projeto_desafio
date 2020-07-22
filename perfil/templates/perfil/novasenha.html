@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block conteudo %}
+
+<div class="col-lg">
+    <h4>Solicitar Nova Senha</h4>
+    <form method="POST" action="{% url 'perfil:passwordreset' %}">
+        <div>
+            {% csrf_token %}
+            {{ newpassform|crispy }}
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">Recuperar</button>
+    </form>
+</div>
+
+
+{% endblock%}

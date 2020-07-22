@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block conteudo %}
+
+<div class="row">
+
+    {% if not request.user.is_authenticated %}
+    <div class="col-lg">
+        <h1>Login</h1>
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}
