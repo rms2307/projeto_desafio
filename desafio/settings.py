@@ -11,9 +11,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&h%iihc(%yxmerds4ec(g4_kd!zs+dph^t1v!t)0iwr%_#ve&9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+TEMPLATE_DEBUG = False
 
 # Application definition
 
@@ -140,6 +140,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'rms.app.teste@gmail.com'
 EMAIL_HOST_PASSWORD = '@Cranio23'
 EMAIL_PORT = 587
+
+AUTH_USER_MODEL = 'perfil.User'
 
 # Heroku settings
 
