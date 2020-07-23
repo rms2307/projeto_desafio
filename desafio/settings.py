@@ -11,9 +11,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&h%iihc(%yxmerds4ec(g4_kd!zs+dph^t1v!t)0iwr%_#ve&9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
 # Application definition
 
@@ -134,11 +134,11 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 # E-mails
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'Sistema JáCalculei <rms.app.teste@gmail.com>'
+DEFAULT_FROM_EMAIL = 'Sistema JáCalculei <email@gmail.com>'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'rms.app.teste@gmail.com'
-EMAIL_HOST_PASSWORD = '@Cranio23'
+EMAIL_HOST_USER = 
+EMAIL_HOST_PASSWORD = 
 EMAIL_PORT = 587
 
 AUTH_USER_MODEL = 'perfil.User'
@@ -147,9 +147,9 @@ AUTH_USER_MODEL = 'perfil.User'
 
 import dj_database_url
 
-DATABASES = {
-    'default':  dj_database_url.config(),
-}
+# DATABASES = {
+#     'default':  dj_database_url.config(),
+# }
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
